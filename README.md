@@ -8,6 +8,13 @@ Projects I've Worked on at Chicago Ruby Hack Night
 * We start with the high level details and work out way down.
 * We implement basic design patters, idiomatic Ruby, and best practices.
 
+## Run
+* cd into the directory
+* type ruby main.rb into your command line
+
+## Testing
+* rspec spec
+
 ## Requirements
 
 * Ruby  2.0.0
