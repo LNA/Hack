@@ -10,9 +10,17 @@ class Bottles
   def verse(number)
     case number
     when 0
-      "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n"
+      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\nGo to the store and buy some more, #{changeover(number)} #{container(number)} of beer on the wall.\n"
     else
-      "#{number} #{container(number + 1)} of beer on the wall, #{number} #{container(number + 1)} of beer.\nTake #{pronoun(number)} down and pass it around, #{successor(number)} #{container(number)} of beer on the wall.\n"
+      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\nTake #{pronoun(number)} down and pass it around, #{changeover(number)} #{container(number)} of beer on the wall.\n"
+    end
+  end
+
+  def changeover(number)
+    if number == 0
+      "99"
+    else
+      successor(number)
     end
   end
 
@@ -37,6 +45,14 @@ class Bottles
       "it"
     else
       "one"
+    end
+  end
+
+  def intro(number = :FIXME)
+    if number == 0
+      "No more"
+    else
+      "#{number}"
     end
   end
 end
