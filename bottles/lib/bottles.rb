@@ -3,17 +3,19 @@ class Bottles
     verses(99, 0)
   end
 
-  def verses(start, finish)
-    start.downto(finish).map {|i| verse(i)}.join("\n")
+  def verses(upper_bound, lower_bound)
+    upper_bound.downto(lower_bound).map {|i| verse(i)}.join("\n")
   end
 
   def verse(number)
-    "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\n#{action(number)}, #{changeover(number)} #{container(number)} of beer on the wall.\n"
+    "#{intro(number)} #{container(number + 1)} of beer on the wall, " + 
+    "#{intro(number).downcase} #{container(number + 1)} of beer.\n" + 
+    "#{outro(number)}, #{name_of(number)} #{container(number)} of beer on the wall.\n"
   end
 
   private
 
-  def intro(number = :FIXME)
+  def intro(number)
     if number == 0
       "No more"
     else
@@ -29,7 +31,7 @@ class Bottles
     end
   end
 
-  def action(number)
+  def outro(number)
     if number == 0
       "Go to the store and buy some more"
     else
@@ -37,7 +39,7 @@ class Bottles
     end
   end
 
-  def changeover(number)
+  def name_of(number)
     if number == 0
       "99"
     else
