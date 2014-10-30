@@ -16,7 +16,7 @@ class Bottles
   private
 
   def intro(number)
-    BottleNumber.new(number).intro(number)
+    BottleNumber.new(number).intro
   end
 
   def container(number)
@@ -46,7 +46,7 @@ class BottleNumber
     @number = number
   end
 
-  def intro(number=self.number) 
+  def intro 
     if number == 0
       "No more"
     else
