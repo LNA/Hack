@@ -20,37 +20,19 @@ class Bottles
   end
 
   def container(number)
-    if number == 2
-      "bottle"
-    else
-      "bottles"
-    end
+    BottleNumber.new(number).container(number)
   end
 
   def outro(number)
-    if number == 0
-      "Go to the store and buy some more"
-    else
-      "Take #{pronoun(number)} down and pass it around"
-    end
+    BottleNumber.new(number).outro(number)
   end
 
   def name_of(number)
-    if number == 0
-      "99"
-    elsif number == 1
-      "no more"
-    else
-      (number-1).to_s
-    end
+    BottleNumber.new(number).name_of(number)
   end
 
   def pronoun(number)
-    if number == 1
-      "it"
-    else
-      "one"
-    end
+     BottleNumber.new(number).pronoun(number)
   end
 end
 
