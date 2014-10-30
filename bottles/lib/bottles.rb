@@ -20,19 +20,19 @@ class Bottles
   end
 
   def container(number)
-    BottleNumber.new(number).container(number)
+    BottleNumber.new(number).container
   end
 
   def outro(number)
-    BottleNumber.new(number).outro(number)
+    BottleNumber.new(number).outro
   end
 
   def name_of(number)
-    BottleNumber.new(number).name_of(number)
+    BottleNumber.new(number).name_of
   end
 
   def pronoun(number)
-     BottleNumber.new(number).pronoun(number)
+     BottleNumber.new(number).pronoun
   end
 end
 
@@ -54,7 +54,7 @@ class BottleNumber
     end
   end
 
-  def container(number)
+  def container
     if number == 2
       "bottle"
     else
@@ -62,15 +62,15 @@ class BottleNumber
     end
   end
 
-  def outro(number)
+  def outro
     if number == 0
       "Go to the store and buy some more"
     else
-      "Take #{pronoun(number)} down and pass it around"
+      "Take #{pronoun} down and pass it around"
     end
   end
 
-  def name_of(number)
+  def name_of
     if number == 0
       "99"
     elsif number == 1
@@ -80,7 +80,7 @@ class BottleNumber
     end
   end
 
-  def pronoun(number)
+  def pronoun
     if number == 1
       "it"
     else
