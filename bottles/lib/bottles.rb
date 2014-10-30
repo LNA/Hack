@@ -11,6 +11,24 @@ class Bottles
     "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\n#{action(number)}, #{changeover(number)} #{container(number)} of beer on the wall.\n"
   end
 
+  private
+
+  def intro(number = :FIXME)
+    if number == 0
+      "No more"
+    else
+      "#{number}"
+    end
+  end
+
+  def container(number)
+    if number == 2
+      "bottle"
+    else
+      "bottles"
+    end
+  end
+
   def action(number)
     if number == 0
       "Go to the store and buy some more"
@@ -27,14 +45,6 @@ class Bottles
     end
   end
 
-  def container(number)
-    if number == 2
-      "bottle"
-    else
-      "bottles"
-    end
-  end
-
   def successor(number)
     if number == 1
       "no more"
@@ -48,14 +58,6 @@ class Bottles
       "it"
     else
       "one"
-    end
-  end
-
-  def intro(number = :FIXME)
-    if number == 0
-      "No more"
-    else
-      "#{number}"
     end
   end
 end
