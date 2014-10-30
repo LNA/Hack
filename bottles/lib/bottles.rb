@@ -42,13 +42,7 @@ class Bottles
   def name_of(number)
     if number == 0
       "99"
-    else
-      successor(number)
-    end
-  end
-
-  def successor(number)
-    if number == 1
+    elsif number == 1
       "no more"
     else
       (number-1).to_s
