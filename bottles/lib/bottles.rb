@@ -16,7 +16,7 @@ class Bottles
   private
 
   def intro(number)
-    BottleNumber.new(number)
+    BottleNumber.new(number).intro(number)
     if number == 0
       "No more"
     else
