@@ -9,9 +9,10 @@ class Bottles
 
   def verse(i)
     number = BottleNumber.new(i)
-    "#{intro(number)} #{container(number + 1)} of beer on the wall, " + 
-    "#{intro(number).downcase} #{container(number + 1)} of beer.\n" + 
-    "#{outro(number)}, #{name_of(number)} #{container(number)} of beer on the wall.\n"
+    next_number = BottleNumber.new(number.number + 1)
+    "#{number.intro} #{next_number.container} of beer on the wall, " + 
+    "#{number.intro.downcase} #{next_number.container} of beer.\n" + 
+    "#{number.outro}, #{number.name_of} #{number.container} of beer on the wall.\n"
   end
 
   private
