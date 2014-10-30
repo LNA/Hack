@@ -10,9 +10,17 @@ class Bottles
   def verse(number)
     case number
     when 0
-      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\nGo to the store and buy some more, #{changeover(number)} #{container(number)} of beer on the wall.\n"
+      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\n#{action(number)}, #{changeover(number)} #{container(number)} of beer on the wall.\n"
     else
-      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\nTake #{pronoun(number)} down and pass it around, #{changeover(number)} #{container(number)} of beer on the wall.\n"
+      "#{intro(number)} #{container(number + 1)} of beer on the wall, #{intro(number).downcase} #{container(number + 1)} of beer.\n#{action(number)}, #{changeover(number)} #{container(number)} of beer on the wall.\n"
+    end
+  end
+
+  def action(number)
+    if number == 0
+      "Go to the store and buy some more"
+    else
+      "Take #{pronoun(number)} down and pass it around"
     end
   end
 
