@@ -14,28 +14,6 @@ class Bottles
     "#{number.intro.downcase} #{next_number.container} of beer.\n" + 
     "#{number.outro}, #{number.name_of} #{number.container} of beer on the wall.\n"
   end
-
-  private
-
-  def intro(number)
-    BottleNumber.new(number).intro
-  end
-
-  def container(number)
-    BottleNumber.new(number).container
-  end
-
-  def outro(number)
-    BottleNumber.new(number).outro
-  end
-
-  def name_of(number)
-    BottleNumber.new(number).name_of
-  end
-
-  def pronoun(number)
-     BottleNumber.new(number).pronoun
-  end
 end
 
 #1. Copy the private methods into their own class.  Don't worry the name; it will reveal its self.
