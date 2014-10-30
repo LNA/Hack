@@ -37,6 +37,7 @@ class Bottles
 end
 
 #1. Copy the private methods into their own class.  Don't worry the name; it will reveal its self.
+#2.  The other steps are in the repo commits
 
 class BottleNumber
   attr_reader :number 
@@ -45,7 +46,7 @@ class BottleNumber
     @number = number
   end
 
-  def intro(number)
+  def intro(number=self.number) 
     if number == 0
       "No more"
     else
