@@ -16,6 +16,7 @@ class Bottles
   private
 
   def intro(number)
+    BottleNumber.new(number)
     if number == 0
       "No more"
     else
@@ -62,7 +63,8 @@ end
 
 class BottleNumber
   attr_reader :number 
-  def initizlize(number)
+
+  def initialize(number)
     @number = number
   end
 
