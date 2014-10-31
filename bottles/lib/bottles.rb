@@ -67,4 +67,14 @@ class BottleNumber
       "one"
     end
   end
+
+  class BottleNumber1 < BottleNumber
+    def container
+      "bottle"
+    end
+
+    def pronoun
+      "one"
+    end
+ end
 end
